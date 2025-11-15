@@ -53,28 +53,56 @@ function startTraining() {
     startBtn.disabled = true;
     pauseBtn.disabled = false;
     stopBtn.disabled = false;
+
+    // Musik starten + State setzen
+    if (audioPlayer.src) {
+        audioPlayer.volume = 0.7;  // Training-Lautstärke
+        audioPlayer.play().catch(err => {
+            console.warn("Autoplay blocked – click to start music", err);
+            volumeInfoEl.textContent = "Klicke, um Musik zu starten";
+        });
+        musicWasPlaying = true;  // Musik läuft jetzt
+    }
 }
 
 // Training pausieren/fortsetzen
 function pauseTraining() {
     if (!isRunning) return;
-    
+
     if (isPaused) {
-        // Fortsetzen
-        if (isTrainingPhase && !isCountdownPhase && audioPlayer.src) {
-            audioPlayer.play();
-        }
-        startTimer();
-        pauseBtn.textContent = "Pause";
+        // === FORTSETZEN ===
         isPaused = false;
-    } else {
-        // Pausieren
-        clearInterval(currentTimer);
-        if (audioPlayer.src) {
-            audioPlayer.pause();
+        pauseBtn.textContent = "Pause";
+
+        // Timer fortsetzen
+        startTimer();
+
+        // Musik fortsetzen – NUR wenn sie vorher lief
+        if (musicWasPlaying && audioPlayer.src) {
+            audioPlayer.volume = 0.7;  // Training-Lautstärke
+
+            audioPlayer.play().catch(err => {
+                console.warn("Autoplay blocked – user interaction needed:", err);
+                volumeInfoEl.textContent = "Klicke, um Musik zu starten";
+            });
         }
-        pauseBtn.textContent = "Fortsetzen";
+
+    } else {
+        // === PAUSIEREN ===
         isPaused = true;
+        pauseBtn.textContent = "Fortsetzen";
+
+        // Timer stoppen
+        clearInterval(currentTimer);
+
+        // Musik pausieren + merken, dass sie lief
+        if (audioPlayer.src && !audioPlayer.paused) {
+            musicWasPlaying = true;
+            audioPlayer.pause();
+            audioPlayer.volume = 0.2;  // Leiser wie gewünscht
+        } else {
+            musicWasPlaying = false;
+        }
     }
 }
 
@@ -87,6 +115,7 @@ function stopTraining() {
     if (audioPlayer.src) {
         audioPlayer.pause();
         audioPlayer.currentTime = 0;
+        musicWasPlaying = false;
     }
     
     // Status zurücksetzen

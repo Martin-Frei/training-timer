@@ -7,6 +7,7 @@ let currentSet = 1;
 let timeLeft = 45;
 let isTrainingPhase = true;
 let isCountdownPhase = false;
+let musicWasPlaying = false;
 
 // DOM-Elemente
 const audioPlayer = document.getElementById('audioPlayer');
