@@ -1,0 +1,55 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#mainGradient)" stroke="#ffffff" stroke-width="8"/>
+  
+  <!-- Timer Circle (outer) -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.3"/>
+  
+  <!-- Timer Arc Progress (3/4 circle) -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#highlightGradient)" stroke-width="16" 
+          stroke-dasharray="848 284" stroke-dashoffset="0" stroke-linecap="round" 
+          transform="rotate(-90 256 256)" opacity="0.9"/>
+  
+  <!-- Hantel - Left Weight -->
+  <rect x="120" y="220" width="40" height="72" rx="8" fill="#ffffff" opacity="0.95"/>
+  <rect x="110" y="210" width="60" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+  <rect x="110" y="282" width="60" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Hantel - Right Weight -->
+  <rect x="352" y="220" width="40" height="72" rx="8" fill="#ffffff" opacity="0.95"/>
+  <rect x="342" y="210" width="60" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+  <rect x="342" y="282" width="60" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Hantel - Bar -->
+  <rect x="170" y="246" width="172" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Timer Hand (pointing to progress) -->
+  <line x1="256" y1="256" x2="256" y2="120" stroke="url(#highlightGradient)" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Center Dot -->
+  <circle cx="256" cy="256" r="12" fill="#ffffff"/>
+  
+  <!-- Timer Numbers -->
+  <text x="256" y="140" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold" opacity="0.8">12</text>
+  <text x="376" y="266" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold" opacity="0.8">3</text>
+  <text x="256" y="390" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold" opacity="0.8">6</text>
+  <text x="136" y="266" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold" opacity="0.8">9</text>
+  
+  <!-- Small decorative elements -->
+  <circle cx="256" cy="100" r="4" fill="url(#highlightGradient)"/>
+  <circle cx="412" cy="256" r="4" fill="url(#highlightGradient)"/>
+  <circle cx="256" cy="412" r="4" fill="url(#highlightGradient)"/>
+  <circle cx="100" cy="256" r="4" fill="url(#highlightGradient)"/>
+</svg>
