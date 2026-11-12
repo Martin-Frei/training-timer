@@ -9,7 +9,7 @@ Diese Web-App ist ein vollständig funktionsfähiger Trainings-Timer, der spezie
 ```
 training-timer/
 ├── index.html          # Haupt-HTML-Datei
-├── styles.css          # Styling und Animationen
+├── style.css           # Styling und Animationen
 ├── settings.js         # Einstellungsmanagement
 ├── timer.js            # Timer-Logik und Phasen-Management
 ├── app.js              # Hauptfunktionen und Event-Handler
