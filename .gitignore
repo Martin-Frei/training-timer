@@ -1,6 +1,15 @@
-@"
+# Dependencies
 node_modules/
+
+# Environment / secrets
+.env
+
+# IDE / OS
 .vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# Logs / archives
 *.log
-"@ | Out-File -FilePath .gitignore -Encoding utf8
+*.zip
