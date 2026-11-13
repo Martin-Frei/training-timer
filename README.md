@@ -1,6 +1,16 @@
 # 🏋️ Training Timer
 
-Ein konfigurierbarer Timer für Intervall-Training mit Musik-Unterstützung.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![PWA](https://img.shields.io/badge/PWA-5A0FC8?logo=pwa&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://martin-frei.github.io/training-timer/)
+
+> **Ein konfigurierbarer Timer für Intervall-Training mit Musik-Unterstützung.**
+
+## 🚀 Live Demo
+
+**[Timer öffnen](https://martin-frei.github.io/training-timer/)**
 
 ## 📋 Features
 
@@ -49,12 +59,17 @@ Ein konfigurierbarer Timer für Intervall-Training mit Musik-Unterstützung.
 ```
 training-timer/
 ├── index.html          # Haupt-HTML-Datei
-├── styles.css          # Styling und Layout
+├── style.css           # Styling und Layout
 ├── settings.js         # Einstellungen-Management
 ├── timer.js            # Timer-Logik
 ├── app.js              # Hauptfunktionen und Event-Handler
+├── manifest.json       # Web-App-Manifest (PWA)
+├── icon/               # Favicons und App-Icons
+├── docs/LOGIC.md       # Ausführliche Logik-Dokumentation
 └── README.md           # Diese Datei
 ```
+
+Die Timer-Logik ist Schritt für Schritt in [docs/LOGIC.md](docs/LOGIC.md) beschrieben.
 
 ## 🔧 Technische Details
 
